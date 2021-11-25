@@ -54,8 +54,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5769024167276591201}
   - component: {fileID: 5769024167258418369}
-  - component: {fileID: 5769024168094303321}
   - component: {fileID: 5769024168094303322}
+  - component: {fileID: 5983179442192826632}
   m_Layer: 0
   m_Name: MainBuilding
   m_TagString: Untagged
@@ -108,24 +108,6 @@ LODGroup:
     renderers:
     - renderer: {fileID: 5769024167274822279}
   m_Enabled: 1
---- !u!114 &5769024168094303321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5769024167276815425}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 0, g: 1, b: 0.0176754, a: 1}
-  outlineWidth: 5
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!114 &5769024168094303322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,11 +120,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14e01563d37a23f4e9bae517fb3e14dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _unitPrefab: {fileID: 100002, guid: 2732fe64dd2799f439fb845921df626b, type: 3}
   _unitsParent: {fileID: 5769024167276591201}
   _maxHealth: 1000
   _icon: {fileID: 21300000, guid: 712262adeebd1924cad36360993fca8a, type: 3}
-  _outline: {fileID: 5769024168094303321}
+  _outline: {fileID: 5983179442192826632}
+--- !u!114 &5983179442192826632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5769024167276815425}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.05796337, g: 1, b: 0, a: 1}
+  outlineWidth: 5
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &5769024167276815427
 GameObject:
   m_ObjectHideFlags: 0

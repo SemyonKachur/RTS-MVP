@@ -1,5 +1,4 @@
-﻿using Abstractions;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Abstractions
 {

@@ -28,7 +28,6 @@ public sealed class MouseInteractionPresenter : MonoBehaviour
         {
             return;
         }
-  
         var selectable = hits
             .Select(hit => hit.collider.GetComponentInParent<ISelectable>())
             .FirstOrDefault(c => c != null);
