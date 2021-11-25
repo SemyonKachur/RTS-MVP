@@ -48,11 +48,33 @@ namespace UserControlSystem.UI.Presenter
             var unitProducer = commandExecutor as CommandExecutorBase<IProduceUnitCommand>;
             if (unitProducer != null)
             {
-                unitProducer.ExecuteSpecificCommand(_context.Inject(new ProduceUnitCommand()));
+                unitProducer.ExecuteSpecificCommand(_context.Inject(new ProduceUnitCommandHeir()));
                 return;
             }
-            throw new ApplicationException($"{nameof(CommandButtonsPresenter)}.{nameof(ONButtonClick)}: " +
-                                           $"Unknown type of commands executor: {commandExecutor.GetType().FullName}!");
+            
+            var unitAttack = commandExecutor as CommandExecutorBase<IAttackCommand>;
+            if (unitAttack != null)
+            {
+              unitAttack.ExecuteSpecificCommand(_context.Inject(new AttackCommand()));
+            }
+            
+            var unitMove = commandExecutor as CommandExecutorBase<IMoveCommand>;
+            if (unitMove != null)
+            {
+                unitMove.ExecuteSpecificCommand(_context.Inject(new MoveCommand()));
+            }
+            
+            var unitPatrol = commandExecutor as CommandExecutorBase<IPatrolCommand>;
+            if (unitPatrol != null)
+            {
+                unitPatrol.ExecuteSpecificCommand(_context.Inject(new PatrolCommand()));
+            }
+            
+            var unitStop = commandExecutor as CommandExecutorBase<IStopCommand>;
+            if (unitStop != null)
+            {
+                unitStop.ExecuteSpecificCommand(_context.Inject(new StopCommand()));
+            }
         }
     }
 }

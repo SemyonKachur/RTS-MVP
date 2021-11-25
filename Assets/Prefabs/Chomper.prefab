@@ -3239,6 +3239,10 @@ GameObject:
   - component: {fileID: 1768622938225345592}
   - component: {fileID: 4709650102259952302}
   - component: {fileID: 633090961158163900}
+  - component: {fileID: 7725387115781877121}
+  - component: {fileID: -8771290286899244805}
+  - component: {fileID: -6385970711908983594}
+  - component: {fileID: 438784940349467649}
   m_Layer: 0
   m_Name: Chomper
   m_TagString: Untagged
@@ -3315,6 +3319,54 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &7725387115781877121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1768622938217969658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 027cd8cd535f49c996d4390b280f5e07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-8771290286899244805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1768622938217969658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf2015534982be46a3af8ac56858eb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-6385970711908983594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1768622938217969658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90634f5e13424e0f93ec6da53ba8021a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &438784940349467649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1768622938217969658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4656ce0316af4312b16e27f3fa8afe40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6624102914606910057
 GameObject:
   m_ObjectHideFlags: 0
