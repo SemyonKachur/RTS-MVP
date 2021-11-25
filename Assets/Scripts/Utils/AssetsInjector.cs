@@ -13,6 +13,13 @@ namespace Utils
             var allFields = targetType.GetFields(BindingFlags.NonPublic 
                                                  | BindingFlags.Public 
                                                  | BindingFlags.Instance);
+            if (allFields.Length == 0)
+            {
+                targetType = target.GetType().BaseType;
+                allFields = targetType.GetFields(BindingFlags.NonPublic 
+                                                     | BindingFlags.Public 
+                                                     | BindingFlags.Instance);
+            }
 
             for (int i = 0; i < allFields.Length; i++)
             {
