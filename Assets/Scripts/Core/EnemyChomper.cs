@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using Abstractions;
 using UnityEngine;
 
-public class EnemyChomper : MonoBehaviour, ISelectable
+public sealed class EnemyChomper : MonoBehaviour, ISelectable
 {
     public float Health => _health;
     public float MaxHealth => _maxHealth;
@@ -14,5 +12,4 @@ public class EnemyChomper : MonoBehaviour, ISelectable
     [field: SerializeField] private Sprite _icon;
     [field: SerializeField] private Outline _outline;
     private float _health = 100;
-
 }
