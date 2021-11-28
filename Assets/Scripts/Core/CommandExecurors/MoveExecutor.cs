@@ -6,6 +6,6 @@ public class MoveExecutor : CommandExecutorBase<IMoveCommand>
 {
     public override void ExecuteSpecificCommand(IMoveCommand command)
     {
-        Debug.Log($"Moved to {command.Position}");
+        Debug.Log($"Moved");
     }
 }

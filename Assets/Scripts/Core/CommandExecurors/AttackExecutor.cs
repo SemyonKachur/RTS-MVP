@@ -8,7 +8,7 @@ namespace Core.CommandExecutors
     {
         public override void ExecuteSpecificCommand(IAttackCommand command)
         {
-            Debug.Log($"Attack unit {command.UnitPrefab.name} in position {command.Position}");
+            Debug.Log($"Attack unit");
         }
     }
 }

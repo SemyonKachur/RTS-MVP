@@ -8,7 +8,7 @@ namespace Core.CommandExecurors
     {
         public override void ExecuteSpecificCommand(IPatrolCommand command)
         {
-            Debug.Log($"Patrolling form {command.StartPosition} to {command.EndPosition}");
+            Debug.Log($"Patrolling");
         }
     }
 }

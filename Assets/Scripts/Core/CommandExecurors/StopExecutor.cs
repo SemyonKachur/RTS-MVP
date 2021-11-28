@@ -8,7 +8,7 @@ namespace Core.CommandExecurors
     {
         public override void ExecuteSpecificCommand(IStopCommand command)
         {
-            Debug.Log($"Object stopped {command.StopPosition}");
+            Debug.Log($"Object stopped");
         }
     }
 }

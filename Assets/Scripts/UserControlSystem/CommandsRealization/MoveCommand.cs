@@ -1,14 +1,15 @@
 ﻿using Abstractions.Commands.CommandsInterfaces;
 using UnityEngine;
-using Utils;
 
 namespace UserControlSystem.CommandsRealization
 {
-    public class MoveCommand : IMoveCommand
+    public sealed class MoveCommand : IMoveCommand
     {
-        public Vector3 Position => position;
-
-        [InjectAsset("Chomper")] private Vector3 position;
-
+        public Vector3 Target { get; }
+        
+        public MoveCommand(Vector3 target)
+        {
+            Target = target;
+        }
     }
 }
