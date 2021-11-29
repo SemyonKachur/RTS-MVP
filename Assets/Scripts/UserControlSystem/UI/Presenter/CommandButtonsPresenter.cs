@@ -4,7 +4,6 @@ using Abstractions;
 using Abstractions.Commands;
 using UnityEngine;
 using UserControlSystem.UI.View;
-using Utils;
 using Zenject;
 
 namespace UserControlSystem.UI.Presenter

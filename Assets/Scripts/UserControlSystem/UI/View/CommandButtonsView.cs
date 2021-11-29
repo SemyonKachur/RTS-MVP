@@ -34,6 +34,16 @@ namespace UserControlSystem.UI.View
             _buttonsByExecutorType
                 .Add(typeof(CommandExecutorBase<IProduceUnitCommand>), _produceUnitButton);
         }
+
+        private void SetInteractible(bool value)
+        {      
+            _attackButton.GetComponent<Selectable>().interactable = value;
+            _moveButton.GetComponent<Selectable>().interactable = value;
+            _patrolButton.GetComponent<Selectable>().interactable = value;
+            _stopButton.GetComponent<Selectable>().interactable = value;
+            _produceUnitButton.GetComponent<Selectable>().interactable = value;
+        }
+
         public void BlockInteractions(ICommandExecutor ce)
         {
             UnblockAllInteractions();
@@ -42,15 +52,6 @@ namespace UserControlSystem.UI.View
         }
 
         public void UnblockAllInteractions() => SetInteractible(true);
-
-        private void SetInteractible(bool value)
-        {
-            _attackButton.GetComponent<Selectable>().interactable = value;
-            _moveButton.GetComponent<Selectable>().interactable = value;
-            _patrolButton.GetComponent<Selectable>().interactable = value;
-            _stopButton.GetComponent<Selectable>().interactable = value;
-            _produceUnitButton.GetComponent<Selectable>().interactable = value;
-        }
 
         public void MakeLayout(IEnumerable<ICommandExecutor> commandExecutors)
         {

@@ -8,12 +8,13 @@ public sealed class MainBuilding : CommandExecutorBase<IProduceUnitCommand>, ISe
     public float Health => _health;
     public float MaxHealth => _maxHealth;
     public Sprite Icon => _icon;
-    public Outline Outline { get; }
+    public Outline Outline => _outline;
 
     [SerializeField] private Transform _unitsParent;
 
     [SerializeField] private float _maxHealth = 1000;
     [SerializeField] private Sprite _icon;
+    [SerializeField] private Outline _outline;
 
     private float _health = 1000;
 

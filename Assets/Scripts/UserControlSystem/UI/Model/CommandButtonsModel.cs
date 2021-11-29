@@ -13,6 +13,9 @@ namespace UserControlSystem
 
         [Inject] private CommandCreatorBase<IProduceUnitCommand> _unitProducer;
         [Inject] private CommandCreatorBase<IMoveCommand> _mover;
+        [Inject] private CommandCreatorBase<IAttackCommand> _attacker;
+        [Inject] private CommandCreatorBase<IStopCommand> _stopper;
+        [Inject] private CommandCreatorBase<IPatrolCommand> _patroller;
         
         private bool _commandIsPending;
 
@@ -27,6 +30,9 @@ namespace UserControlSystem
 
             _unitProducer.ProcessCommandExecutor(commandExecutor, command => ExecuteCommandWrapper(commandExecutor, command));
             _mover.ProcessCommandExecutor(commandExecutor, command => ExecuteCommandWrapper(commandExecutor, command));
+            _attacker.ProcessCommandExecutor(commandExecutor, command => ExecuteCommandWrapper(commandExecutor, command));
+            _stopper.ProcessCommandExecutor(commandExecutor, command => ExecuteCommandWrapper(commandExecutor, command));
+            _patroller.ProcessCommandExecutor(commandExecutor, command => ExecuteCommandWrapper(commandExecutor, command));
         }
 
         public void ExecuteCommandWrapper(ICommandExecutor commandExecutor, object command)
@@ -38,14 +44,17 @@ namespace UserControlSystem
 
         public void OnSelectionChanged()
         {
-            _commandIsPending = false;
+           _commandIsPending = false;
             processOnCancel();
         }
 
         private void processOnCancel()
         {
             _unitProducer.ProcessCancel();
+            _attacker.ProcessCancel();
+            _stopper.ProcessCancel();
             _mover.ProcessCancel();
+            _patroller.ProcessCancel();
             OnCommandCancel?.Invoke();
         }
     }
